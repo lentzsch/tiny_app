@@ -1,0 +1,9 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.carousel {
+    display:flex;
+    justify-content: space-around;
+}
