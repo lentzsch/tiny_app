@@ -11,19 +11,33 @@ window.addEventListener("DOMContentLoaded", event => {
     const appType = document.getElementById("content-text-apptype")
 
     const pages = ["app", "blog", "shop", "note", "game", "grave"];
-    let currentPage = pages[0];
+    let pageNumber = 0
+    let currentPage = pages[pageNumber];
+    appType.innerText = currentPage
 
     rightArrow.addEventListener("click", event => {
-        if (currentPage < pages.length) {
-            curentPage++
+        // console.log(currentPage)
+        // console.log(appType)
+        // console.log(pageNumber)
+        if (pageNumber < pages.length - 1) {
+            pageNumber++
+            currentPage = pages[pageNumber]
             appType.innerText = currentPage
+            // console.log(currentPage)
+            // console.log(appType)
         }
     })
 
     leftArrow.addEventListener("click", event => {
-        if (currentPage > 0) {
-            curentPage--
+        // console.log(currentPage)
+        // console.log(appType)
+        // console.log("hi")
+        if (pageNumber > 0) {
+            pageNumber--
+            currentPage = pages[pageNumber]
             appType.innerText = currentPage
+            // console.log(currentPage)
+            // console.log(appType)
         }
     })
 
